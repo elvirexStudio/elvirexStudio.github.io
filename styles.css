@@ -330,6 +330,7 @@ p {
 .story-card,
 .process-card,
 .feature-card,
+.support-section,
 .cta-section {
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -429,6 +430,28 @@ p {
   background: linear-gradient(135deg, var(--violet), var(--blue));
 }
 
+.support-section {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: clamp(24px, 5vw, 54px);
+  align-items: center;
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto clamp(22px, 4vw, 42px);
+  padding: clamp(28px, 5vw, 58px);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(247, 244, 255, 0.84)),
+    radial-gradient(circle at right, rgba(31, 140, 255, 0.14), transparent 24rem);
+}
+
+.support-section h2 {
+  max-width: 760px;
+  font-size: clamp(1.9rem, 4vw, 3.25rem);
+}
+
+.support-section p {
+  max-width: 720px;
+}
+
 .cta-section {
   display: grid;
   grid-template-columns: 1fr 320px;
@@ -474,6 +497,17 @@ p {
   margin-top: 5px;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.community-section {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto clamp(68px, 10vw, 116px);
+  padding: clamp(56px, 8vw, 92px) 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.community-section .button {
+  margin-top: 16px;
 }
 
 .site-footer {
@@ -540,6 +574,7 @@ p {
   .split,
   .feature-grid,
   .cta-section,
+  .support-section,
   .process-card {
     grid-template-columns: 1fr;
   }
